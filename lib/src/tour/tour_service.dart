@@ -11,6 +11,8 @@ class TourService {
 
   loadTour() {
     _fileService.loadFile();
+
+    // TODO figure out which tour we are currently dealing with
   }
 
   saveTour() {}

@@ -5,6 +5,7 @@
 # export to json
 # validate json
 # render html content in preview
+# snackbar service (see potato)
 
 # extend file
 # push to gitea

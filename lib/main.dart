@@ -5,6 +5,8 @@ import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 import 'src/app.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await flutter_acrylic.Window.initialize();
   await flutter_acrylic.Window.hideWindowControls();
   await WindowManager.instance.ensureInitialized();
@@ -18,5 +20,5 @@ void main() async {
     await windowManager.setPreventClose(true);
     await windowManager.setSkipTaskbar(false);
   });
-  runApp(TourGuideApp());
+  runApp(const TourGuideApp());
 }
