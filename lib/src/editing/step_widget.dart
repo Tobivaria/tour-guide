@@ -1,4 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:tour_guide/src/editing/inputs/text_input.dart';
+import 'package:tour_guide/src/editing/inputs/version_input.dart';
 
 class StepWidget extends StatefulWidget {
   const StepWidget({super.key});
@@ -8,27 +10,28 @@ class StepWidget extends StatefulWidget {
 }
 
 class _StepWidgetState extends State<StepWidget> {
-  void _minVersionChanged(int? newVal) {
-    // TODO
-  }
-
   @override
   Widget build(BuildContext context) {
-    return ScaffoldPage(
+    return const ScaffoldPage(
       content: Column(
         children: [
-          InfoLabel(
-            label: 'Enter your name:',
-            child: const TextBox(
-              placeholder: 'Name',
-              expands: false,
-            ),
+          TextInput(
+              label: "Selector",
+              placeholder: "Specify a unique selector, e.g. an id"),
+          VersionInput(
+            version: TourVersion.min,
           ),
-          NumberBox(
-            value: 123,
-            onChanged: _minVersionChanged,
-            mode: SpinButtonPlacementMode.inline,
+          VersionInput(
+            version: TourVersion.max,
           ),
+          TextInput(
+              label: "English",
+              placeholder:
+                  "Enter html content, tags, etc. see preview to the right"),
+          TextInput(
+              label: "German",
+              placeholder:
+                  "Enter html content, tags, etc. see preview to the right"),
         ],
       ),
     );
