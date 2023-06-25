@@ -1,7 +1,9 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:tour_guide/src/editing/editing_screen.dart';
 import 'package:tour_guide/src/routes.dart';
 import 'package:tour_guide/src/start_screen/start_screen.dart';
 import 'package:tour_guide/src/theme.dart';
+import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 
 /// The Widget that configures your application.
 class TourGuideApp extends StatelessWidget {
@@ -14,7 +16,20 @@ class TourGuideApp extends StatelessWidget {
     final appTheme = AppTheme();
     return FluentApp.router(
       title: "Tour Guide",
-      builder: (context, child) => const StartScreen(),
+      builder: (context, child) {
+        return Directionality(
+          textDirection: appTheme.textDirection,
+          child: NavigationPaneTheme(
+            data: NavigationPaneThemeData(
+              backgroundColor:
+                  appTheme.windowEffect != flutter_acrylic.WindowEffect.disabled
+                      ? Colors.transparent
+                      : null,
+            ),
+            child: child!,
+          ),
+        );
+      },
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
       routeInformationProvider: router.routeInformationProvider,

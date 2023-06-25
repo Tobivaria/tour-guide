@@ -2,15 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 class Preview extends StatelessWidget {
-  const Preview({super.key});
+  final String data;
 
-// TODO what happens when there is an error within the html template?
-  final data = """<h1>Title</h1><p> lore ipsom alalal hans</p>""";
+  const Preview({
+    super.key,
+    required this.data,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Html(
-      data: data,
+    return Column(
+      children: [
+        Text("Preview"),
+        Html(
+          data: data,
+        ),
+      ],
     );
   }
 }

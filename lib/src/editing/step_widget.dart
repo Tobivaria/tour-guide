@@ -14,21 +14,23 @@ class _StepWidgetState extends State<StepWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        InfoLabel(
-          label: 'Enter your name:',
-          child: const TextBox(
-            placeholder: 'Name',
-            expands: false,
+    return ScaffoldPage(
+      content: Column(
+        children: [
+          InfoLabel(
+            label: 'Enter your name:',
+            child: const TextBox(
+              placeholder: 'Name',
+              expands: false,
+            ),
           ),
-        ),
-        NumberBox(
-          value: 123,
-          onChanged: _minVersionChanged,
-          mode: SpinButtonPlacementMode.inline,
-        ),
-      ],
+          NumberBox(
+            value: 123,
+            onChanged: _minVersionChanged,
+            mode: SpinButtonPlacementMode.inline,
+          ),
+        ],
+      ),
     );
   }
 }
