@@ -21,6 +21,7 @@ dependencies:
   flutter:
     sdk: flutter
   system_theme: ^2.2.0
+  logger: ^1.4.0
 
 dev_dependencies:
   flutter_test:

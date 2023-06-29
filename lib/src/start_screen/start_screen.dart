@@ -13,7 +13,7 @@ class StartScreen extends StatelessWidget {
         Button(
           child: const Text("Edit"),
           onPressed: () => router.pushNamed("editing"),
-        )
+        ),
       ],
     );
   }
