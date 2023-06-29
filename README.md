@@ -1,14 +1,12 @@
-# tour_guide
+# TODOs
 
-# buttons for creating tours
-# drag and drop existing tours
-# export to json
-# validate json
-# render html content in preview
-# snackbar service (see potato)
-
-# extend file
-# push to gitea
-# get updates from gitea (just use git commands)
-
-# show recent files
+- [ ] buttons for creating tours
+- [ ] drag and drop existing tours
+- [ ] export to json
+- [ ] validate json
+- [x] render html content in preview
+- [x] snackbar service
+- [ ] extend file
+- [ ] push to gitea
+- [ ] get updates from gitea
+- [ ] show recent files
